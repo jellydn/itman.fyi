@@ -4,56 +4,129 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="ProductsWay - Dung Huynh Duc">
 	<main>
-		<div class="profile">
+		<!-- Hero Section -->
+		<section class="hero">
 			<h1>Hi, I'm <span class="text-gradient">Dung Huynh Duc</span></h1>
 			<p class="bio">With over 14 years of experience as a full-stack developer, I've had the opportunity to spearhead project teams at tech startups in Vietnam, Thailand, Japan and Singapore. Additionally, I have worked as a freelance engineer for various companies based in Asia Pacific, Europe, and North America.</p>
-			<p class="bio">Currently, I serve as a Senior Full Stack Software Engineer at ACX, where I focus on developing blockchain-based carbon exchange platforms and innovative solutions using TypeScript, Node.js, and React.</p>
-		</div>
+			<p class="bio">Currently, I serve as a Senior Full Stack Software Engineer at <a href="https://acx.net" target="_blank" rel="noopener" class="text-accent hover:text-accent-light">ACX</a>, where I focus on developing blockchain-based carbon exchange platforms and innovative solutions using TypeScript, Node.js, and React.</p>
+		</section>
 
+		<!-- Featured Projects Section -->
+		<section class="content-section">
+			<h2>Featured Projects</h2>
+			<p class="section-desc">Open source projects and tools I've created</p>
+			<div class="grid">
+				<a href="https://github.com/jellydn/zed-101-setup" class="card">
+					<h3>Zed 101 Setup</h3>
+					<p>Your ultimate guide to setting up Zed with Vim mode, tailored settings, and key bindings for a seamless coding experience</p>
+					<span class="tech-stack">⭐️ 538 stars • TypeScript</span>
+				</a>
+				<a href="https://github.com/jellydn/next-swagger-doc" class="card">
+					<h3>Next Swagger Doc</h3>
+					<p>This package reads your JSDoc-annotated source code on NextJS API route and generates an OpenAPI (Swagger) specification</p>
+					<span class="tech-stack">⭐️ 476 stars • TypeScript</span>
+				</a>
+				<a href="https://github.com/jellydn/typescript-tips" class="card">
+					<h3>TypeScript Tips</h3>
+					<p>A curated list of awesome TypeScript Tips</p>
+					<span class="tech-stack">⭐️ 412 stars</span>
+				</a>
+				<a href="https://github.com/jellydn/dapp-starter" class="card">
+					<h3>Dapp Starter</h3>
+					<p>Opinionated Dapp Starter Template provides a solid foundation for building Ethereum-based applications with React, Next.js, Hardhat, TypeChain</p>
+					<span class="tech-stack">⭐️ 324 stars • TypeScript</span>
+				</a>
+				<a href="https://github.com/jellydn/next-app-starter" class="card">
+					<h3>Next App Starter</h3>
+					<p>Another awesome starter for your app based on nextjs + tailwind + react-query + zod + react-hook-form + next-auth + jotai</p>
+					<span class="tech-stack">⭐️ 260 stars • TypeScript</span>
+				</a>
+				<a href="https://github.com/jellydn/hurl.nvim" class="card">
+					<h3>Hurl.nvim</h3>
+					<p>Neovim plugin designed to run HTTP requests directly from .hurl files. Elevate your API development workflow</p>
+					<span class="tech-stack">⭐️ 173 stars • Lua</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- Popular Videos Section -->
+		<section class="content-section">
+			<h2>Popular Videos</h2>
+			<p class="section-desc">Most viewed content from IT Man Channel</p>
+			<div class="grid video-grid">
+				<div class="card video-card">
+					<div class="video-thumbnail">
+						<img src="https://i.ytimg.com/vi/NAk4tyfIM3A/hqdefault.jpg" alt="Zed Editor 101" loading="lazy" />
+						<a href="https://www.youtube.com/watch?v=NAk4tyfIM3A" target="_blank" rel="noopener" class="play-button">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+								<path d="M8 5v14l11-7z"/>
+							</svg>
+						</a>
+					</div>
+					<h3>Zed Editor 101 - Ultimate Setup Guide</h3>
+					<p>Learn how to set up Zed Editor with Vim Mode, Local AI, and Custom Keybindings</p>
+					<span class="views">10K+ views • June 2, 2024</span>
+				</div>
+				<div class="card video-card">
+					<div class="video-thumbnail">
+						<img src="https://i.ytimg.com/vi/LXRgV99S0Zk/hqdefault.jpg" alt="DApp 101" loading="lazy" />
+						<a href="https://www.youtube.com/watch?v=LXRgV99S0Zk" target="_blank" rel="noopener" class="play-button">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
+								<path d="M8 5v14l11-7z"/>
+							</svg>
+						</a>
+					</div>
+					<h3>DApp 101 - How to get started</h3>
+					<p>Complete guide to getting started with blockchain development</p>
+					<span class="views">8K+ views • Aug 15, 2021</span>
+				</div>
+			</div>
+			<div class="cta-container">
+				<a href="https://github.com/jellydn/itman-channel" target="_blank" rel="noopener" class="cta-button">
+					View More Videos
+					<svg class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+					</svg>
+				</a>
+			</div>
+		</section>
+
+		<!-- Connect With Me Section -->
 		<section class="content-section">
 			<h2>Connect With Me</h2>
-			<ul class="social-links" role="list">
-				<li>
-					<a href="https://github.com/jellydn/itman-channel" class="social-card youtube">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-							<path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-						</svg>
-						<span>YouTube</span>
-					</a>
-				</li>
-				<li>
-					<a href="https://blog.productsway.com" class="social-card blog">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-							<path d="M14.422 14.422c-1.95 1.95-5.112 1.95-7.062 0s-1.95-5.112 0-7.062 5.112-1.95 7.062 0 1.95 5.112 0 7.062zm-1.414-1.414c1.17-1.17 1.17-3.072 0-4.242s-3.072-1.17-4.242 0-1.17 3.072 0 4.242 3.072 1.17 4.242 0zm3.807-3.807c0-.707.707-1.414 1.414-1.414.707 0 1.414.707 1.414 1.414 0 .707-.707 1.414-1.414 1.414-.707 0-1.414-.707-1.414-1.414zm-11.046 11.046c0-.707.707-1.414 1.414-1.414.707 0 1.414.707 1.414 1.414 0 .707-.707 1.414-1.414 1.414-.707 0-1.414-.707-1.414-1.414zm5.523-5.523c0-.707.707-1.414 1.414-1.414.707 0 1.414.707 1.414 1.414 0 .707-.707 1.414-1.414 1.414-.707 0-1.414-.707-1.414-1.414z"/>
-						</svg>
-						<span>Blog</span>
-					</a>
-				</li>
-				<li>
-					<a href="https://github.com/jellydn" class="social-card github">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-							<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-						</svg>
-						<span>GitHub</span>
-					</a>
-				</li>
-				<li>
-					<a href="https://productsway.com/resume.pdf" class="social-card cv">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-							<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM9 13h6v2H9v-2zm0 4h6v2H9v-2z"/>
-						</svg>
-						<span>CV</span>
-					</a>
-				</li>
-				<li>
-					<a href="mailto:dung@productsway.com" class="social-card email">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-							<path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-						</svg>
-						<span>Email</span>
-					</a>
-				</li>
-			</ul>
+			<p class="section-desc">Let's connect and build something amazing together</p>
+			<div class="social-links">
+				<a href="https://github.com/jellydn" target="_blank" rel="noopener" class="social-link">
+					<svg class="icon" viewBox="0 0 24 24">
+						<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+					</svg>
+					GitHub
+				</a>
+				<a href="https://twitter.com/jellydn" target="_blank" rel="noopener" class="social-link">
+					<svg class="icon" viewBox="0 0 24 24">
+						<path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+					</svg>
+					Twitter
+				</a>
+				<a href="https://github.com/jellydn/itman-channel" target="_blank" rel="noopener" class="social-link">
+					<svg class="icon" viewBox="0 0 24 24">
+						<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+					</svg>
+					YouTube
+				</a>
+				<a href="https://blog.productsway.com" target="_blank" rel="noopener" class="social-link">
+					<svg class="icon" viewBox="0 0 24 24">
+						<path d="M14.5 2.134a1 1 0 0 1 1.366-.366l.1.066.1.067 4 3a1 1 0 0 1 .33.388l.036.114.013.11v10.487a1 1 0 0 1-.366 1.366l-.1.066-.1.067-4 3a1 1 0 0 1-1.366-.366l-.066-.1-.067-.1V2.134zM6 6a2 2 0 0 1 2-2h3.5a1 1 0 0 1 0 2H8a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h3.5a1 1 0 1 1 0 2H8a2 2 0 0 1-2-2V6z"/>
+					</svg>
+					Blog
+				</a>
+				<a href="https://productsway.com" target="_blank" rel="noopener" class="social-link">
+					<svg class="icon" viewBox="0 0 24 24">
+						<path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v10h14V7H5zm2 2h10v2H7V9zm0 4h10v2H7v-2z"/>
+					</svg>
+					Portfolio
+				</a>
+			</div>
 		</section>
 	</main>
 </Layout>
@@ -64,24 +137,21 @@ import Layout from '../layouts/Layout.astro';
 		padding: 1rem;
 		width: 1200px;
 		max-width: calc(100% - 2rem);
+		color: var(--text);
 		font-size: 20px;
 		line-height: 1.6;
 	}
-	.profile {
+	.hero {
+		padding: 4rem 0;
 		text-align: center;
-		margin-bottom: 4rem;
+		max-width: 800px;
+		margin: 0 auto;
 	}
 	h1 {
 		font-size: 3rem;
 		font-weight: 700;
-		line-height: 1;
-		margin-bottom: 1em;
-	}
-	h2 {
-		font-size: 2rem;
-		font-weight: 600;
-		margin-bottom: 1.5rem;
-		color: rgb(var(--accent-light));
+		line-height: 1.2;
+		margin-bottom: 1rem;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -91,94 +161,147 @@ import Layout from '../layouts/Layout.astro';
 		background-position: 0%;
 	}
 	.bio {
-		color: rgb(var(--accent-light));
-		font-size: 1.2rem;
+		color: var(--text);
 		margin-bottom: 1rem;
-		max-width: 800px;
-		margin-left: auto;
-		margin-right: auto;
 	}
 	.content-section {
-		margin-bottom: 4rem;
+		padding: 4rem 0;
+		border-top: 1px solid rgba(var(--accent), 0.2);
 	}
-	.video-grid, .blog-grid, .project-grid {
+	.content-section h2 {
+		font-size: 2rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		text-align: center;
+	}
+	.section-desc {
+		text-align: center;
+		color: rgb(var(--accent));
+		margin-bottom: 3rem;
+	}
+	.grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
-		margin-bottom: 2rem;
+		padding: 0;
 	}
-	.video-card, .blog-card, .project-card {
+	.card {
 		background-color: var(--card-bg);
 		padding: 1.5rem;
 		border-radius: 8px;
 		text-decoration: none;
 		color: var(--text);
 		transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
-	.video-card:hover, .blog-card:hover, .project-card:hover {
-		transform: translateY(-2px);
+	.card:hover {
+		transform: translateY(-4px);
 		background-color: rgb(var(--accent-light), 0.1);
 	}
-	.video-card h3, .blog-card h3, .project-card h3 {
+	.card h3 {
 		font-size: 1.2rem;
+		font-weight: 600;
 		margin-bottom: 0.5rem;
-		color: rgb(var(--accent-light));
+		color: rgb(var(--accent));
 	}
-	.video-card p, .blog-card p, .project-card p {
-		font-size: 1rem;
+	.card p {
+		flex-grow: 1;
 		margin-bottom: 1rem;
-		color: var(--text);
 	}
-	.date, .tech-stack {
+	.tech-stack {
 		font-size: 0.9rem;
 		color: rgb(var(--accent-light));
 	}
-	.tech-stack {
+	.video-grid {
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	}
+	.video-card {
+		position: relative;
+	}
+	.video-thumbnail {
+		position: relative;
+		border-radius: 8px;
+		overflow: hidden;
+		margin-bottom: 1rem;
+	}
+	.video-thumbnail img {
+		width: 100%;
+		height: auto;
 		display: block;
-		margin-top: 0.5rem;
+	}
+	.play-button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		opacity: 0.8;
+		transition: opacity 0.2s ease-in-out;
+	}
+	.video-thumbnail:hover .play-button {
+		opacity: 1;
+	}
+	.views {
+		font-size: 0.9rem;
+		color: rgb(var(--accent-light));
+	}
+	.cta-container {
+		text-align: center;
+		margin-top: 2rem;
+	}
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.75rem 1.5rem;
+		background-color: rgb(var(--accent));
+		color: white;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: background-color 0.2s ease-in-out;
+	}
+	.cta-button:hover {
+		background-color: rgb(var(--accent-dark));
+	}
+	.cta-button .icon {
+		width: 1.2rem;
+		height: 1.2rem;
+		margin-left: 0.5rem;
 	}
 	.social-links {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-		gap: 2rem;
-		padding: 0;
-		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-top: 2rem;
 	}
-	.social-card {
+	.social-link {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
-		padding: 1rem;
-		text-decoration: none;
-		color: var(--text);
+		padding: 0.75rem 1.5rem;
 		background-color: var(--card-bg);
+		color: var(--text);
 		border-radius: 8px;
-		transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		text-decoration: none;
+		font-weight: 500;
+		transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 	}
-	.social-card:hover {
+	.social-link:hover {
 		transform: translateY(-2px);
 		background-color: rgb(var(--accent-light), 0.1);
 	}
-	.social-card svg {
-		flex-shrink: 0;
+	.social-link .icon {
+		width: 1.2rem;
+		height: 1.2rem;
+		margin-right: 0.5rem;
+		fill: currentColor;
 	}
-	.social-card span {
-		font-size: 1.1rem;
-		font-weight: 500;
+	.text-accent {
+		color: rgb(var(--accent));
 	}
-	.youtube:hover {
-		color: #ff0000;
-	}
-	.blog:hover {
-		color: #00ff00;
-	}
-	.github:hover {
-		color: #f5f5f5;
-	}
-	.email:hover {
-		color: #4a9eff;
-	}
-	.cv:hover {
-		color: #ff9900;
+	.text-accent:hover {
+		color: rgb(var(--accent-light));
 	}
 </style>
