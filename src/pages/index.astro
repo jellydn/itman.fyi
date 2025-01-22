@@ -1,14 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
+import logo from '../assets/logo.png';
 ---
-
-
 <script>
   function openYoutubeVideo(id) {
     window.open(`https://www.youtube.com/watch?v=${id}`, "_blank");
   }
-  
+
   // Open youtube video when clicking on the card
   document.querySelectorAll('.video-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -17,10 +16,20 @@ import Layout from '../layouts/Layout.astro';
     });
   });
 </script>
-<Layout title="ProductsWay - Dung Huynh Duc">
+
+<Layout title="IT Man - Dung Huynh Duc">
 	<main>
 		<!-- Hero Section -->
 		<section class="hero">
+			<div class="logo-container">
+				<Image
+					src={logo}
+					alt="IT Man Logo"
+					width={200}
+					height={200}
+					class="logo"
+				/>
+			</div>
 			<h1>Hi, I'm <span class="text-gradient">Dung Huynh Duc</span></h1>
 			<p class="bio">With over 14 years of experience as a full-stack developer, I've had the opportunity to spearhead project teams at tech startups in Vietnam, Thailand, Japan and Singapore. Additionally, I have worked as a freelance engineer for various companies based in Asia Pacific, Europe, and North America.</p>
 			<p class="bio">Currently, I serve as a Senior Full Stack Software Engineer at <a href="https://acx.net" target="_blank" rel="noopener" class="text-accent hover:text-accent-light">ACX</a>, where I focus on developing blockchain-based carbon exchange platforms and innovative solutions using TypeScript, Node.js, and React.</p>
@@ -71,12 +80,7 @@ import Layout from '../layouts/Layout.astro';
 			<div class="grid video-grid">
 				<div class="card video-card" data-video-id="NAk4tyfIM3A">
 					<div class="video-thumbnail">
-						<Image src="https://i.ytimg.com/vi/NAk4tyfIM3A/hqdefault.jpg" alt="Zed Editor 101" loading="lazy" height={200} width={300} />
-						<a href="https://www.youtube.com/watch?v=NAk4tyfIM3A" target="_blank" rel="noopener" class="play-button">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
-								<path d="M8 5v14l11-7z"/>
-							</svg>
-						</a>
+						<Image src="https://i.ytimg.com/vi/NAk4tyfIM3A/hqdefault.jpg" alt="Zed Editor 101" loading="lazy" width={300} height={200} />
 					</div>
 					<h3>Zed Editor 101 - Ultimate Setup Guide</h3>
 					<p>Learn how to set up Zed Editor with Vim Mode, Local AI, and Custom Keybindings</p>
@@ -84,12 +88,7 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 				<div class="card video-card" data-video-id="LXRgV99S0Zk">
 					<div class="video-thumbnail">
-            <Image src="https://i.ytimg.com/vi/LXRgV99S0Zk/hqdefault.jpg" alt="DApp 101" loading="lazy" height={200} width={300} />
-						<a href="https://www.youtube.com/watch?v=LXRgV99S0Zk" target="_blank" rel="noopener" class="play-button">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
-								<path d="M8 5v14l11-7z"/>
-							</svg>
-						</a>
+						<Image src="https://i.ytimg.com/vi/LXRgV99S0Zk/hqdefault.jpg" alt="DApp 101" loading="lazy" width={300} height={200} />
 					</div>
 					<h3>DApp 101 - How to get started</h3>
 					<p>Complete guide to getting started with blockchain development</p>
@@ -97,7 +96,7 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 			<div class="cta-container">
-				<a href="https://www.youtube.com/c/ITManVietnam" target="_blank" rel="noopener" class="cta-button">
+				<a href="https://github.com/jellydn/itman-channel" target="_blank" rel="noopener" class="cta-button">
 					View More Videos
 					<svg class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -178,78 +177,91 @@ import Layout from '../layouts/Layout.astro';
 	.bio {
 		color: var(--text);
 		margin-bottom: 1rem;
+		opacity: 0.9;
 	}
 	.content-section {
-		padding: 4rem 0;
-		border-top: 1px solid rgba(var(--accent), 0.2);
+		padding: 6rem 0;
+		border-top: 1px solid var(--card-border);
 	}
 	.content-section h2 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		font-weight: 700;
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.75rem;
 		text-align: center;
+		color: rgb(var(--accent));
 	}
 	.section-desc {
 		text-align: center;
-		color: rgb(var(--accent));
-		margin-bottom: 3rem;
+		color: var(--text);
+		opacity: 0.7;
+		margin-bottom: 4rem;
+		font-size: 1.2rem;
 	}
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2.5rem;
 		padding: 0;
 	}
 	.card {
 		background-color: var(--card-bg);
-		padding: 1.5rem;
-		border-radius: 8px;
+		padding: 1rem;
+		border-radius: 12px;
 		text-decoration: none;
 		color: var(--text);
-		transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		border: 1px solid var(--card-border);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 	}
 	.card:hover {
-		transform: translateY(-4px);
-		background-color: rgb(var(--accent-light), 0.1);
+		transform: translateY(-6px);
+		border-color: rgb(var(--accent));
+		box-shadow: 0 10px 20px rgba(var(--accent), 0.1);
 	}
 	.card h3 {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		font-weight: 600;
-		margin-bottom: 0.5rem;
+		margin-bottom: 1rem;
 		color: rgb(var(--accent));
 	}
 	.card p {
 		flex-grow: 1;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
+		line-height: 1.7;
+		opacity: 0.9;
 	}
 	.tech-stack {
-		font-size: 0.9rem;
-		color: rgb(var(--accent-light));
+		font-size: 1rem;
+		color: var(--text);
+		opacity: 0.7;
+		padding-top: 1rem;
+		border-top: 1px solid var(--card-border);
 	}
 	.video-grid {
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 	}
 	.video-card {
 		position: relative;
+		cursor: pointer;
 	}
-
-  .video-card:hover {
-    cursor: pointer;
-  }
-
 	.video-thumbnail {
 		position: relative;
-		border-radius: 8px;
+		border-radius: 12px;
 		overflow: hidden;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
+		border: 1px solid var(--card-border);
 	}
 	.video-thumbnail img {
 		width: 100%;
 		height: auto;
 		display: block;
+		transition: transform 0.3s ease-in-out;
+	}
+	.video-thumbnail:hover img {
+		transform: scale(1.05);
 	}
 	.play-button {
 		position: absolute;
@@ -257,15 +269,24 @@ import Layout from '../layouts/Layout.astro';
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: white;
-		opacity: 0.8;
-		transition: opacity 0.2s ease-in-out;
+		opacity: 0.9;
+		transition: all 0.3s ease-in-out;
+		background-color: rgb(var(--accent));
+		padding: 1rem;
+		border-radius: 50%;
 	}
 	.video-thumbnail:hover .play-button {
 		opacity: 1;
+		transform: translate(-50%, -50%) scale(1.1);
+		background-color: rgb(var(--accent-dark));
 	}
 	.views {
-		font-size: 0.9rem;
-		color: rgb(var(--accent-light));
+		font-size: 1rem;
+		color: var(--text);
+		opacity: 0.7;
+		margin-top: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--card-border);
 	}
 	.cta-container {
 		text-align: center;
@@ -280,10 +301,12 @@ import Layout from '../layouts/Layout.astro';
 		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 500;
-		transition: background-color 0.2s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		border: 1px solid transparent;
 	}
 	.cta-button:hover {
 		background-color: rgb(var(--accent-dark));
+		transform: translateY(-2px);
 	}
 	.cta-button .icon {
 		width: 1.2rem;
@@ -306,11 +329,13 @@ import Layout from '../layouts/Layout.astro';
 		border-radius: 8px;
 		text-decoration: none;
 		font-weight: 500;
-		transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		border: 1px solid var(--card-border);
 	}
 	.social-link:hover {
 		transform: translateY(-2px);
-		background-color: rgb(var(--accent-light), 0.1);
+		border-color: rgb(var(--accent));
+		color: rgb(var(--accent));
 	}
 	.social-link .icon {
 		width: 1.2rem;
@@ -322,6 +347,19 @@ import Layout from '../layouts/Layout.astro';
 		color: rgb(var(--accent));
 	}
 	.text-accent:hover {
-		color: rgb(var(--accent-light));
+		color: rgb(var(--accent-dark));
+	}
+	.logo-container {
+		margin-bottom: 2rem;
+	}
+
+	.logo {
+		width: 200px;
+		height: auto;
+		transition: transform 0.3s ease;
+	}
+
+	.logo:hover {
+		transform: scale(1.05);
 	}
 </style>
