@@ -1,7 +1,22 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 ---
 
+
+<script>
+  function openYoutubeVideo(id) {
+    window.open(`https://www.youtube.com/watch?v=${id}`, "_blank");
+  }
+  
+  // Open youtube video when clicking on the card
+  document.querySelectorAll('.video-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const videoId = card.getAttribute('data-video-id');
+      openYoutubeVideo(videoId);
+    });
+  });
+</script>
 <Layout title="ProductsWay - Dung Huynh Duc">
 	<main>
 		<!-- Hero Section -->
@@ -54,9 +69,9 @@ import Layout from '../layouts/Layout.astro';
 			<h2>Popular Videos</h2>
 			<p class="section-desc">Most viewed content from IT Man Channel</p>
 			<div class="grid video-grid">
-				<div class="card video-card">
+				<div class="card video-card" data-video-id="NAk4tyfIM3A">
 					<div class="video-thumbnail">
-						<img src="https://i.ytimg.com/vi/NAk4tyfIM3A/hqdefault.jpg" alt="Zed Editor 101" loading="lazy" />
+						<Image src="https://i.ytimg.com/vi/NAk4tyfIM3A/hqdefault.jpg" alt="Zed Editor 101" loading="lazy" height={200} width={300} />
 						<a href="https://www.youtube.com/watch?v=NAk4tyfIM3A" target="_blank" rel="noopener" class="play-button">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
 								<path d="M8 5v14l11-7z"/>
@@ -67,9 +82,9 @@ import Layout from '../layouts/Layout.astro';
 					<p>Learn how to set up Zed Editor with Vim Mode, Local AI, and Custom Keybindings</p>
 					<span class="views">10K+ views • June 2, 2024</span>
 				</div>
-				<div class="card video-card">
+				<div class="card video-card" data-video-id="LXRgV99S0Zk">
 					<div class="video-thumbnail">
-						<img src="https://i.ytimg.com/vi/LXRgV99S0Zk/hqdefault.jpg" alt="DApp 101" loading="lazy" />
+            <Image src="https://i.ytimg.com/vi/LXRgV99S0Zk/hqdefault.jpg" alt="DApp 101" loading="lazy" height={200} width={300} />
 						<a href="https://www.youtube.com/watch?v=LXRgV99S0Zk" target="_blank" rel="noopener" class="play-button">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12">
 								<path d="M8 5v14l11-7z"/>
@@ -82,7 +97,7 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 			<div class="cta-container">
-				<a href="https://github.com/jellydn/itman-channel" target="_blank" rel="noopener" class="cta-button">
+				<a href="https://www.youtube.com/c/ITManVietnam" target="_blank" rel="noopener" class="cta-button">
 					View More Videos
 					<svg class="icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -220,6 +235,11 @@ import Layout from '../layouts/Layout.astro';
 	.video-card {
 		position: relative;
 	}
+
+  .video-card:hover {
+    cursor: pointer;
+  }
+
 	.video-thumbnail {
 		position: relative;
 		border-radius: 8px;
@@ -249,7 +269,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 	.cta-container {
 		text-align: center;
-		margin-top: 2rem;
+		margin-top: 4rem;
 	}
 	.cta-button {
 		display: inline-flex;
