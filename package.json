@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "itman.fyi",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,6 +11,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.15.3"
+    "astro": "^5.1.8"
   }
 }
